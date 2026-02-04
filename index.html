@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .course-item{
+            border:2px solid lightgray;
+            margin:10px;
+            padding:10px;
+
+        }
+    </style>
+    <script>
+        function addCourse(){
+            var course=document.getElementById("course");
+            var div=document.createElement("div");
+            div.innerText=course.value;
+            div.className="course-item";
+            course.value="";
+
+            var container=document.getElementById("container");
+            container.appendChild(div);
+        }
+    </script>
+</head>
+<body>
+    <div class="course-item">HTML5</div>
+    <div class="course-item">CSS3</div>
+    <div id="container"></div>
+    
+    Course:
+    <input type="text" id="course">
+    <button onclick="addCourse()">AddCourse</button>
+
+
+
+    
+</body>
+</html>
